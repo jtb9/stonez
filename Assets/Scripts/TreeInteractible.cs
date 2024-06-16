@@ -28,10 +28,17 @@ public class TreeInteractible : MonoBehaviour
                 };
             }
             else {
+                int quantityCalculation = 1 * Global._woodcutLevel * (int)Math.Round((i.DistanceToHome() / 50.0f));
+
+                // minimum of one log per drop
+                if (quantityCalculation <= 0) {
+                    quantityCalculation = 1;
+                }
+
                 return new InventoryItem()
                 {
                     itemName = "wood",
-                    itemQuantity = 1 * Global._woodcutLevel * (int)Math.Round((i.DistanceToHome() / 50.0f))
+                    itemQuantity = quantityCalculation
                 };
             }
         }

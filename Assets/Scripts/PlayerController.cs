@@ -23,11 +23,13 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private CameraController cameraController;
 
+    private LootIndicatorController lootIndicatorController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cameraController = GameObject.FindFirstObjectByType<CameraController>();
+        lootIndicatorController = GetComponent<LootIndicatorController>();
 
         source = GetComponent<AudioSource>();
         inventory = GetComponent<Inventory>();

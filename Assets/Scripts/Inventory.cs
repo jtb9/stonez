@@ -5,6 +5,13 @@ using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[Serializable]
+public class InventoryIcon {
+    public String itemName = "";
+    public Texture2D icon;
+}
+
+[Serializable]
 public class InventoryItem
 {
     public String itemName = "";
@@ -17,6 +24,17 @@ public class Inventory : MonoBehaviour
     public static Texture2D getIconByName(String itemName) {
         return iconLibrary[0];
     }
+
+    public Texture2D getIconByNameNonStatic(String itemName) {
+        for (int i = 0; i < itemIconLibrary.Count; i++) {
+            if (itemIconLibrary[i].itemName == itemName) {
+                return itemIconLibrary[i].icon;
+            }
+        }
+
+        return itemIconLibrary[0].icon;
+    }
+
     public int getValue(String itemName) {
         if (itemName == "wood") {
             return 1;
@@ -39,7 +57,15 @@ public class Inventory : MonoBehaviour
         return 0;
     }
 
+    private LootIndicatorController lootIndicatorController;
+
     public List<InventoryItem> items = new List<InventoryItem>();
+    public List<InventoryIcon> itemIconLibrary = new List<InventoryIcon>();
+
+    void Start() {
+        lootIndicatorController = GetComponent<LootIndicatorController>();
+    }
+
     public int gold
     {
         get
@@ -101,6 +127,8 @@ public class Inventory : MonoBehaviour
         {
             items.Add(newItem);
         }
+
+        lootIndicatorController.SpawnLootIcon(getIconByNameNonStatic(newItem.itemName), newItem.itemQuantity);
 
         Save();
     }
