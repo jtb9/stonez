@@ -1,0 +1,21 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Editor/MainUI.uss?fileID=7433441132597879392&amp;guid=9194f7143ed645b4f82e8111084c25cc&amp;type=3#MainUI" />
+    <Style src="project://database/Assets/baseCSS.uss?fileID=7433441132597879392&amp;guid=1bdd7d912a3b1394eb356a221e298e5f&amp;type=3#baseCSS" />
+    <engine:VisualElement name="minimap" style="flex-grow: 1; position: absolute; top: 5px; right: 5px; width: 200px; height: 200px; background-image: url(&quot;project://database/Assets/UIResources/minimap.png?fileID=2800000&amp;guid=209dd9b21a001134e9794c8ae7b6fe28&amp;type=3#minimap&quot;); display: none;">
+        <engine:VisualElement name="player_center" style="flex-grow: 1; position: absolute; left: 50%; top: 50%; width: 5px; height: 5px; background-color: rgb(0, 255, 2);" />
+    </engine:VisualElement>
+    <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1;">
+        <engine:VisualElement picking-mode="Ignore" style="flex-grow: 1;">
+            <engine:Label text="&#10;" data-source-type="PlayStatus, Assembly-CSharp" name="inventory" class="custom-label" style="height: 37px; width: 107px; font-size: 8px; display: none;" />
+            <engine:Label data-source-type="PlayStatus, Assembly-CSharp" name="status" class="custom-label" style="height: 37px; width: 107px; font-size: 8px; display: none;" />
+            <engine:Label text="&#10;" data-source-type="PlayStatus, Assembly-CSharp" name="stats" class="custom-label" style="height: 37px; width: 107px; font-size: 8px; display: none;" />
+        </engine:VisualElement>
+        <engine:VisualElement picking-mode="Ignore" style="flex-grow: initial;">
+            <engine:Label name="log" picking-mode="Ignore" style="height: 100px; display: none;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+    <engine:Button name="left" class="button1" style="position: absolute; bottom: 10px; left: 10px; width: 55px; height: 40px; background-image: url(&quot;project://database/Assets/UIResources/left_arrow.png?fileID=2800000&amp;guid=d5a2802372b51944dbfb9e624e9349cd&amp;type=3#left_arrow&quot;); background-color: rgba(104, 188, 58, 0); border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px; min-height: 55px; max-width: 55px; min-width: 55px; max-height: 55px; display: none;" />
+    <engine:Button name="right" class="button1" style="position: absolute; top: auto; left: auto; bottom: 10px; right: 10px; border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px; background-color: rgba(104, 188, 58, 0); background-image: url(&quot;project://database/Assets/UIResources/right_arrow.png?fileID=2800000&amp;guid=473ceea3dc41cd444957d044d53fab23&amp;type=3#right_arrow&quot;); width: 55px; height: 55px; max-width: 55px; min-width: 55px; max-height: 55px; display: none;" />
+    <engine:Button name="skills" style="background-image: url(&quot;project://database/Assets/UIResources/info.png?fileID=2800000&amp;guid=1b0250f81e56d8f478dbc5583c5be9de&amp;type=3#info&quot;); width: 100px; height: 100%; max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px; position: absolute; top: 5px; left: 5px; background-color: rgba(188, 188, 188, 0); border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px;" />
+    <engine:Button name="inventory" style="background-image: url(&quot;project://database/Assets/UIResources/inventory.png?fileID=2800000&amp;guid=99eccde8b74a12241ba839484ddbb53a&amp;type=3#inventory&quot;); width: 100px; height: 100px; max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px; position: absolute; top: 115px; left: 5px; background-color: rgba(188, 188, 188, 0); border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px;" />
+</engine:UXML>

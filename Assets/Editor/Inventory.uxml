@@ -1,0 +1,12 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; background-color: rgb(63, 42, 42);">
+        <engine:Label text="Current Gold:" name="gold" style="color: rgb(231, 231, 231);" />
+        <engine:VisualElement name="inventory" style="flex-grow: 1;">
+            <engine:VisualElement style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; height: 50px; min-height: 50px; max-height: 50px;">
+                <engine:Label text="Label" />
+                <engine:Button text="Button" />
+                <engine:Button text="Button" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

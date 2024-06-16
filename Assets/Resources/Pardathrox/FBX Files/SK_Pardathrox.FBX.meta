@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 25fca58047456ce47bb65e1a80f2f53a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Pardathrox_
+    100002: Pardathrox_ Head
+    100004: Pardathrox_ L Calf
+    100006: Pardathrox_ L Clavicle
+    100008: Pardathrox_ L Finger0
+    100010: Pardathrox_ L Finger01
+    100012: Pardathrox_ L Finger1
+    100014: Pardathrox_ L Finger11
+    100016: Pardathrox_ L Finger2
+    100018: Pardathrox_ L Finger21
+    100020: Pardathrox_ L Foot
+    100022: Pardathrox_ L Forearm
+    100024: Pardathrox_ L Hand
+    100026: Pardathrox_ L HorseLink
+    100028: Pardathrox_ L Thigh
+    100030: Pardathrox_ L Toe0
+    100032: Pardathrox_ L Toe01
+    100034: Pardathrox_ L Toe1
+    100036: Pardathrox_ L Toe11
+    100038: Pardathrox_ L Toe2
+    100040: Pardathrox_ L Toe21
+    100042: Pardathrox_ L UpperArm
+    100044: Pardathrox_ Neck
+    100046: Pardathrox_ Neck1
+    100048: Pardathrox_ Neck2
+    100050: Pardathrox_ Neck3
+    100052: Pardathrox_ Neck4
+    100054: Pardathrox_ Pelvis
+    100056: Pardathrox_ R Calf
+    100058: Pardathrox_ R Clavicle
+    100060: Pardathrox_ R Finger0
+    100062: Pardathrox_ R Finger01
+    100064: Pardathrox_ R Finger1
+    100066: Pardathrox_ R Finger11
+    100068: Pardathrox_ R Finger2
+    100070: Pardathrox_ R Finger21
+    100072: Pardathrox_ R Foot
+    100074: Pardathrox_ R Forearm
+    100076: Pardathrox_ R Hand
+    100078: Pardathrox_ R HorseLink
+    100080: Pardathrox_ R Thigh
+    100082: Pardathrox_ R Toe0
+    100084: Pardathrox_ R Toe01
+    100086: Pardathrox_ R Toe1
+    100088: Pardathrox_ R Toe11
+    100090: Pardathrox_ R Toe2
+    100092: Pardathrox_ R Toe21
+    100094: Pardathrox_ R UpperArm
+    100096: Pardathrox_ Spine
+    100098: Pardathrox_ Spine1
+    100100: Pardathrox_Jaw
+    100102: Pardathrox_Tongue_01
+    100104: Pardathrox_Tongue_02
+    100106: Pardathrox_Tongue_03
+    100108: Pardathrox_Tongue_04
+    100110: root
+    100112: SK_Pardathrox
+    100114: //RootNode
+    400000: Pardathrox_
+    400002: Pardathrox_ Head
+    400004: Pardathrox_ L Calf
+    400006: Pardathrox_ L Clavicle
+    400008: Pardathrox_ L Finger0
+    400010: Pardathrox_ L Finger01
+    400012: Pardathrox_ L Finger1
+    400014: Pardathrox_ L Finger11
+    400016: Pardathrox_ L Finger2
+    400018: Pardathrox_ L Finger21
+    400020: Pardathrox_ L Foot
+    400022: Pardathrox_ L Forearm
+    400024: Pardathrox_ L Hand
+    400026: Pardathrox_ L HorseLink
+    400028: Pardathrox_ L Thigh
+    400030: Pardathrox_ L Toe0
+    400032: Pardathrox_ L Toe01
+    400034: Pardathrox_ L Toe1
+    400036: Pardathrox_ L Toe11
+    400038: Pardathrox_ L Toe2
+    400040: Pardathrox_ L Toe21
+    400042: Pardathrox_ L UpperArm
+    400044: Pardathrox_ Neck
+    400046: Pardathrox_ Neck1
+    400048: Pardathrox_ Neck2
+    400050: Pardathrox_ Neck3
+    400052: Pardathrox_ Neck4
+    400054: Pardathrox_ Pelvis
+    400056: Pardathrox_ R Calf
+    400058: Pardathrox_ R Clavicle
+    400060: Pardathrox_ R Finger0
+    400062: Pardathrox_ R Finger01
+    400064: Pardathrox_ R Finger1
+    400066: Pardathrox_ R Finger11
+    400068: Pardathrox_ R Finger2
+    400070: Pardathrox_ R Finger21
+    400072: Pardathrox_ R Foot
+    400074: Pardathrox_ R Forearm
+    400076: Pardathrox_ R Hand
+    400078: Pardathrox_ R HorseLink
+    400080: Pardathrox_ R Thigh
+    400082: Pardathrox_ R Toe0
+    400084: Pardathrox_ R Toe01
+    400086: Pardathrox_ R Toe1
+    400088: Pardathrox_ R Toe11
+    400090: Pardathrox_ R Toe2
+    400092: Pardathrox_ R Toe21
+    400094: Pardathrox_ R UpperArm
+    400096: Pardathrox_ Spine
+    400098: Pardathrox_ Spine1
+    400100: Pardathrox_Jaw
+    400102: Pardathrox_Tongue_01
+    400104: Pardathrox_Tongue_02
+    400106: Pardathrox_Tongue_03
+    400108: Pardathrox_Tongue_04
+    400110: root
+    400112: //RootNode
+    400114: SK_Pardathrox
+    2100000: M_Pardathrox
+    4300000: SK_Pardathrox
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SK_Pardathrox
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pardathrox
+    second: {fileID: 2100000, guid: 4550251c1b701044f8ad2755c0957d1b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

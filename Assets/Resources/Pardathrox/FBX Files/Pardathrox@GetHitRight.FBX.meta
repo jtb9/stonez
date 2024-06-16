@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: e22e1f3a97541a84b87f0bff305311c3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Pardathrox_
+    100004: Pardathrox_ Head
+    100006: Pardathrox_ L Calf
+    100008: Pardathrox_ L Clavicle
+    100010: Pardathrox_ L Finger0
+    100012: Pardathrox_ L Finger01
+    100014: Pardathrox_ L Finger1
+    100016: Pardathrox_ L Finger11
+    100018: Pardathrox_ L Finger2
+    100020: Pardathrox_ L Finger21
+    100022: Pardathrox_ L Foot
+    100024: Pardathrox_ L Forearm
+    100026: Pardathrox_ L Hand
+    100028: Pardathrox_ L HorseLink
+    100030: Pardathrox_ L Thigh
+    100032: Pardathrox_ L Toe0
+    100034: Pardathrox_ L Toe01
+    100036: Pardathrox_ L Toe1
+    100038: Pardathrox_ L Toe11
+    100040: Pardathrox_ L Toe2
+    100042: Pardathrox_ L Toe21
+    100044: Pardathrox_ L UpperArm
+    100046: Pardathrox_ Neck
+    100048: Pardathrox_ Neck1
+    100050: Pardathrox_ Neck2
+    100052: Pardathrox_ Neck3
+    100054: Pardathrox_ Neck4
+    100056: Pardathrox_ Pelvis
+    100058: Pardathrox_ R Calf
+    100060: Pardathrox_ R Clavicle
+    100062: Pardathrox_ R Finger0
+    100064: Pardathrox_ R Finger01
+    100066: Pardathrox_ R Finger1
+    100068: Pardathrox_ R Finger11
+    100070: Pardathrox_ R Finger2
+    100072: Pardathrox_ R Finger21
+    100074: Pardathrox_ R Foot
+    100076: Pardathrox_ R Forearm
+    100078: Pardathrox_ R Hand
+    100080: Pardathrox_ R HorseLink
+    100082: Pardathrox_ R Thigh
+    100084: Pardathrox_ R Toe0
+    100086: Pardathrox_ R Toe01
+    100088: Pardathrox_ R Toe1
+    100090: Pardathrox_ R Toe11
+    100092: Pardathrox_ R Toe2
+    100094: Pardathrox_ R Toe21
+    100096: Pardathrox_ R UpperArm
+    100098: Pardathrox_ Spine
+    100100: Pardathrox_ Spine1
+    100102: Pardathrox_Jaw
+    100104: Pardathrox_Tongue_01
+    100106: Pardathrox_Tongue_02
+    100108: Pardathrox_Tongue_03
+    100110: Pardathrox_Tongue_04
+    100112: root
+    400000: //RootNode
+    400002: Pardathrox_
+    400004: Pardathrox_ Head
+    400006: Pardathrox_ L Calf
+    400008: Pardathrox_ L Clavicle
+    400010: Pardathrox_ L Finger0
+    400012: Pardathrox_ L Finger01
+    400014: Pardathrox_ L Finger1
+    400016: Pardathrox_ L Finger11
+    400018: Pardathrox_ L Finger2
+    400020: Pardathrox_ L Finger21
+    400022: Pardathrox_ L Foot
+    400024: Pardathrox_ L Forearm
+    400026: Pardathrox_ L Hand
+    400028: Pardathrox_ L HorseLink
+    400030: Pardathrox_ L Thigh
+    400032: Pardathrox_ L Toe0
+    400034: Pardathrox_ L Toe01
+    400036: Pardathrox_ L Toe1
+    400038: Pardathrox_ L Toe11
+    400040: Pardathrox_ L Toe2
+    400042: Pardathrox_ L Toe21
+    400044: Pardathrox_ L UpperArm
+    400046: Pardathrox_ Neck
+    400048: Pardathrox_ Neck1
+    400050: Pardathrox_ Neck2
+    400052: Pardathrox_ Neck3
+    400054: Pardathrox_ Neck4
+    400056: Pardathrox_ Pelvis
+    400058: Pardathrox_ R Calf
+    400060: Pardathrox_ R Clavicle
+    400062: Pardathrox_ R Finger0
+    400064: Pardathrox_ R Finger01
+    400066: Pardathrox_ R Finger1
+    400068: Pardathrox_ R Finger11
+    400070: Pardathrox_ R Finger2
+    400072: Pardathrox_ R Finger21
+    400074: Pardathrox_ R Foot
+    400076: Pardathrox_ R Forearm
+    400078: Pardathrox_ R Hand
+    400080: Pardathrox_ R HorseLink
+    400082: Pardathrox_ R Thigh
+    400084: Pardathrox_ R Toe0
+    400086: Pardathrox_ R Toe01
+    400088: Pardathrox_ R Toe1
+    400090: Pardathrox_ R Toe11
+    400092: Pardathrox_ R Toe2
+    400094: Pardathrox_ R Toe21
+    400096: Pardathrox_ R UpperArm
+    400098: Pardathrox_ Spine
+    400100: Pardathrox_ Spine1
+    400102: Pardathrox_Jaw
+    400104: Pardathrox_Tongue_01
+    400106: Pardathrox_Tongue_02
+    400108: Pardathrox_Tongue_03
+    400110: Pardathrox_Tongue_04
+    400112: root
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 25fca58047456ce47bb65e1a80f2f53a,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

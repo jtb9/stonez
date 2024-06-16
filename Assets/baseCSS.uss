@@ -1,0 +1,43 @@
+.button1 {
+    background-image: none;
+    -unity-slice-left: 60;
+    -unity-slice-top: 120;
+    -unity-slice-right: 60;
+    -unity-slice-bottom: 120;
+    -unity-slice-scale: 0.1px;
+    background-color: rgb(104, 188, 58);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-left-color: rgb(67, 70, 23);
+    border-right-color: rgb(67, 70, 23);
+    border-top-color: rgb(67, 70, 23);
+    border-bottom-color: rgb(67, 70, 23);
+    -unity-font-definition: url("project://database/Assets/UIResources/CrimsonPro-VariableFont_wght.ttf?fileID=12800000&guid=187d6d95ffa73494e87bdbff3157235a&type=3#CrimsonPro-VariableFont_wght");
+    font-size: 28px;
+}
+
+.panel1 {
+    flex-grow: 1;
+    background-color: rgb(63, 42, 42);
+    background-image: url("project://database/Assets/UIResources/window_frame_1.png?fileID=2800000&guid=a1b32103477de224cb659a8ab27fd77e&type=3#window_frame_1");
+    -unity-slice-left: 148;
+    -unity-slice-top: 148;
+    -unity-slice-right: 148;
+    -unity-slice-bottom: 148;
+    -unity-slice-scale: 0.25px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.wallpaper {
+    flex-grow: 1;
+    overflow: hidden;
+}

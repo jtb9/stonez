@@ -1,0 +1,12 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/baseCSS.uss?fileID=7433441132597879392&amp;guid=1bdd7d912a3b1394eb356a221e298e5f&amp;type=3#baseCSS" />
+    <engine:VisualElement class="panel1" style="flex-grow: 1; background-color: rgb(63, 42, 42);">
+        <engine:Button text="Normal" name="button1" class="button1" style="font-size: 28px;" />
+        <engine:Button text="Challenge" name="button2" class="button1" style="font-size: 28px;" />
+        <engine:Button text="Done&#10;" name="button3" class="button1" style="font-size: 28px;" />
+        <engine:Label text="Current Gold:" name="gold" style="color: rgb(231, 231, 231); -unity-font-definition: url(&quot;project://database/Assets/UIResources/CrimsonPro-VariableFont_wght.ttf?fileID=12800000&amp;guid=187d6d95ffa73494e87bdbff3157235a&amp;type=3#CrimsonPro-VariableFont_wght&quot;); font-size: 28px;" />
+        <engine:Label text="Current Gold:" name="battle" style="color: rgb(231, 231, 231); -unity-font-definition: url(&quot;project://database/Assets/UIResources/CrimsonPro-VariableFont_wght.ttf?fileID=12800000&amp;guid=187d6d95ffa73494e87bdbff3157235a&amp;type=3#CrimsonPro-VariableFont_wght&quot;); font-size: 28px;" />
+        <engine:Label text="Current Gold:" name="attack" style="color: rgb(231, 231, 231); -unity-font-definition: url(&quot;project://database/Assets/UIResources/CrimsonPro-VariableFont_wght.ttf?fileID=12800000&amp;guid=187d6d95ffa73494e87bdbff3157235a&amp;type=3#CrimsonPro-VariableFont_wght&quot;); font-size: 28px;" />
+        <engine:Label text="Current Gold:" name="strength" style="color: rgb(231, 231, 231); -unity-font-definition: url(&quot;project://database/Assets/UIResources/CrimsonPro-VariableFont_wght.ttf?fileID=12800000&amp;guid=187d6d95ffa73494e87bdbff3157235a&amp;type=3#CrimsonPro-VariableFont_wght&quot;); font-size: 28px;" />
+    </engine:VisualElement>
+</engine:UXML>

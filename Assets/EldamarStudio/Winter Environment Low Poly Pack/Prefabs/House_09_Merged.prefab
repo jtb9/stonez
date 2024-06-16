@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4302536994883382302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3530397925206161060}
+  - component: {fileID: 527384738021734657}
+  - component: {fileID: 2356881144633331147}
+  - component: {fileID: -5896092775030474236}
+  m_Layer: 0
+  m_Name: House_09_Merged
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3530397925206161060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302536994883382302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &527384738021734657
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302536994883382302}
+  m_Mesh: {fileID: 4661306797317574161, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+--- !u!23 &2356881144633331147
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302536994883382302}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 316263957594265927, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -4518077013869159213, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -8545605354474940977, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -3559601056963840684, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: 5903439897002790019, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: 5351780470050164010, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -6500064530767339474, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -7878765456932150363, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: 3968762291757289348, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -256583360206007614, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -6951766813948494346, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -1713750701770056243, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: 1086316551502098278, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: 2748628858378620371, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -2937144876390972580, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -2092314078377607375, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: -8635029578926767461, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: 1889729867880627890, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  - {fileID: 4888970756308939345, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-5896092775030474236
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302536994883382302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4661306797317574161, guid: 7903e70656a7e26468bc058ea660ee09, type: 3}
