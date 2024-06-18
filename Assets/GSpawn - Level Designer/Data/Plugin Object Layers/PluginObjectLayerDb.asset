@@ -38,7 +38,7 @@ MonoBehaviour:
   - {fileID: 4163655236469130285}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3847087874239001423}
   - {fileID: 520911504507663836}
   - {fileID: 0}
   - {fileID: 0}
@@ -82,6 +82,25 @@ MonoBehaviour:
   _guid:
     _guidString: 65919eb2-4c84-493a-8dd8-6b92f287912d
   _layer: 4
+  _isErasable: 1
+  _isTerrainMesh: 0
+  _isSphericalMesh: 0
+  _uiSelected: 0
+--- !u!114 &3847087874239001423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79425504febc2843801a7aa28fd9495, type: 3}
+  m_Name: Layer_3
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: ef1218d3-019d-4b59-bf34-9868404f37e2
+  _layer: 3
   _isErasable: 1
   _isTerrainMesh: 0
   _isSphericalMesh: 0

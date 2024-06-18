@@ -41,3 +41,23 @@
     flex-grow: 1;
     overflow: hidden;
 }
+
+.button1 {
+    background-image: none;
+    -unity-slice-left: 60;
+    -unity-slice-top: 120;
+    -unity-slice-right: 60;
+    -unity-slice-bottom: 120;
+    -unity-slice-scale: 0.1px;
+    background-color: rgb(104, 188, 58);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-left-color: rgb(67, 70, 23);
+    border-right-color: rgb(67, 70, 23);
+    border-top-color: rgb(67, 70, 23);
+    border-bottom-color: rgb(67, 70, 23);
+    -unity-font-definition: url("project://database/Assets/UIResources/CrimsonPro-VariableFont_wght.ttf?fileID=12800000&guid=187d6d95ffa73494e87bdbff3157235a&type=3#CrimsonPro-VariableFont_wght");
+    font-size: 28px;
+}
