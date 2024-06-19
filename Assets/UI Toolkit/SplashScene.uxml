@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/baseCSS.uss?fileID=7433441132597879392&amp;guid=1bdd7d912a3b1394eb356a221e298e5f&amp;type=3#baseCSS" />
+    <engine:VisualElement style="flex-grow: 1; background-color: rgb(41, 34, 34); align-items: center; justify-content: center;">
+        <engine:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UIResources/splash.png?fileID=2800000&amp;guid=4de4f12e31b792e428b93ccb44f7c80b&amp;type=3#splash&quot;); width: 512px; height: 512px; max-width: 512px; max-height: 512px; min-width: 512px; min-height: 512px;" />
+    </engine:VisualElement>
+    <engine:Button text="Play" name="play" class="button1" />
+</engine:UXML>

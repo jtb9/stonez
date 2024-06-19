@@ -118,12 +118,40 @@ public class BaseEnemy : MonoBehaviour
                     if (h)
                     {
                         if (Vector3.Distance(h.gameObject.transform.position, transform.position) <= 1.0f) {
-                            h.health -= baseDamage;
+                            // factor in the player defense level
+                            int aboutToTakeDamage = (int)Math.Round(CalculateDamage(baseDamage * 1.0f));
+                            h.health -= aboutToTakeDamage;
                         }
                     }
                 }
             }
         }
+    }
+
+    public float CalculateDamage(float incomingDamage)
+    {
+        // Calculate damage reduction factor from defense level
+        float damageReductionFactor = CalculateDamageReductionFactor(Global._defenseLevel);
+
+        // Apply damage reduction
+        float damageTaken = incomingDamage * (1f - damageReductionFactor);
+
+        return damageTaken;
+    }
+
+    private float CalculateDamageReductionFactor(float defense)
+    {
+        // These coefficients can be adjusted to fit the defense curve needed
+        float maxDefense = 100f; // Maximum defense at which damage is almost nullified
+        float minDefense = 0f;  // Minimum defense with no reduction
+
+        // Linear interpolation for simplicity, can be replaced with any function that fits the game design
+        float defenseFactor = Mathf.InverseLerp(minDefense, maxDefense, defense);
+
+        // Damage reduction scales non-linearly between levels 40 and 100 as per requirements
+        float damageReduction = Mathf.Lerp(0.4f, 0.9f, defenseFactor); // Adjust these values as needed
+
+        return damageReduction;
     }
 
     private IEnumerator AttackCoroutine()

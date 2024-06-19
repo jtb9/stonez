@@ -62,10 +62,10 @@ public class BattleMenuController : MonoBehaviour
     }
 
     void UpdategUI() {
-        SetLabel("gold", "Current Gold: " + Global._gold.ToString());
-        SetLabel("battle", "Current Battle Level: " + Global._nextChallengeLevel.ToString());
-        SetLabel("attack", "Current Attack Level: " + Global._attackLevel.ToString());
-        SetLabel("strength", "Current Strength Level: " + Global._strengthLevel.ToString());
+        // SetLabel("gold", "Current Gold: " + Global._gold.ToString());
+        SetLabel("battle", Global._nextChallengeLevel.ToString());
+        // SetLabel("attack", "Current Attack Level: " + Global._attackLevel.ToString());
+        // SetLabel("strength", "Current Strength Level: " + Global._strengthLevel.ToString());
     }
 
     void OnClick1() {

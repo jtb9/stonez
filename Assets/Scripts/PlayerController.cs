@@ -23,7 +23,19 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private CameraController cameraController;
 
+    public GameObject challengePrefabHook;
+
     private LootIndicatorController lootIndicatorController;
+
+    private VisualElement leftJoycon;
+    private VisualElement rightJoycon;
+    public float joyconRadius = 100f; // Radius within which the joycon can move
+    public float maxDistance = 5f;  // Maximum distance the player can move in one go
+
+    private Vector2 leftJoyconStartPosition;
+    private Vector2 leftJoyconCurrentPosition;
+    private bool leftJoyconActive = false;
+    private bool leftJoyconPointerDown = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,10 +45,6 @@ public class PlayerController : MonoBehaviour
 
         source = GetComponent<AudioSource>();
         inventory = GetComponent<Inventory>();
-
-        // target 60 fps
-        QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 60;
 
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
@@ -49,6 +57,83 @@ public class PlayerController : MonoBehaviour
 
         var inventoryButton = uiHook.rootVisualElement.Q<Button>("inventory");
         inventoryButton.clicked += InventoryMenuClick;
+
+        var challengeButton = uiHook.rootVisualElement.Q<Button>("challenge");
+        challengeButton.clicked += ChallengeButtonClicked;
+
+        leftJoycon = new VisualElement();
+        leftJoycon.style.width = 200;
+        leftJoycon.style.height = 200;
+        leftJoycon.style.backgroundColor = new StyleColor(Color.black);
+        leftJoycon.style.opacity = 0.8f;
+        leftJoycon.style.borderTopLeftRadius = 180;
+        leftJoycon.style.borderTopRightRadius = 180;
+        leftJoycon.style.borderBottomLeftRadius = 180;
+        leftJoycon.style.borderBottomRightRadius = 180;
+        leftJoycon.style.position = Position.Absolute;
+        leftJoycon.style.left = 100;
+        leftJoycon.style.bottom = 100;
+        uiHook.rootVisualElement.Add(leftJoycon);
+
+        // Register event handlers
+        leftJoycon.RegisterCallback<PointerDownEvent>(OnLeftJoyconPointerDown);
+        leftJoycon.RegisterCallback<PointerMoveEvent>(OnLeftJoyconPointerMove);
+        leftJoycon.RegisterCallback<PointerUpEvent>(OnLeftJoyconPointerUp);
+        leftJoycon.RegisterCallback<PointerLeaveEvent>(OnLeftJoyconPointerLeave);
+        leftJoycon.RegisterCallback<PointerEnterEvent>(OnLeftJoyconPointerEnter);
+    }
+
+    private void OnLeftJoyconPointerDown(PointerDownEvent evt)
+    {
+        leftJoyconStartPosition = evt.position;
+        leftJoyconCurrentPosition = evt.position;
+        leftJoyconActive = true;
+        leftJoyconPointerDown = true;
+    }
+
+    private void OnLeftJoyconPointerMove(PointerMoveEvent evt)
+    {
+        if (leftJoyconActive)
+        {
+            Vector2 delta = evt.position - new Vector3(leftJoyconStartPosition.x, leftJoyconStartPosition.y, 0.0f);
+            if (delta.magnitude > joyconRadius)
+            {
+                delta = delta.normalized * joyconRadius;
+            }
+            leftJoyconCurrentPosition = leftJoyconStartPosition + delta;
+        }
+    }
+
+    private void OnLeftJoyconPointerUp(PointerUpEvent evt)
+    {
+        leftJoyconActive = false;
+        leftJoyconPointerDown = false;
+    }
+
+    private void OnLeftJoyconPointerLeave(PointerLeaveEvent evt)
+    {
+        if (!leftJoyconPointerDown)
+        {
+            leftJoyconActive = false;
+        }
+    }
+
+    private void OnLeftJoyconPointerEnter(PointerEnterEvent evt)
+    {
+        if (leftJoyconPointerDown)
+        {
+            leftJoyconActive = true;
+        }
+    }
+
+    void ChallengeButtonClicked()
+    {
+        targetInteractible = challengePrefabHook.GetComponent<Interactible>();
+
+
+        targetLocation = getDestination(targetInteractible.dock.transform.position);
+        HandleTouch(targetLocation);
+        targetAction = 2;
     }
 
     void InventoryMenuClick()
@@ -84,11 +169,13 @@ public class PlayerController : MonoBehaviour
 
     void playRockMineSound()
     {
+        animator.SetBool("attacking", true);
         source.PlayOneShot(rockMine);
     }
 
     void playWoodcutSound()
     {
+        animator.SetBool("attacking", true);
         source.PlayOneShot(woodCut);
     }
 
@@ -112,18 +199,13 @@ public class PlayerController : MonoBehaviour
         {
             if (!EventSystem.current.IsPointerOverGameObject())
             {
-                _HandleTouch(Input.mousePosition);
+                if (Application.platform != RuntimePlatform.Android)
+                {
+                    _HandleTouch(Input.mousePosition);
+                }
             }
         }
 
-        // if (Input.touchCount > 0)
-        // {
-        //     Touch touch = Input.GetTouch(0);
-        //     if (!EventSystem.current.IsPointerOverGameObject())
-        //     {
-        //         _HandleTouch(touch.position);
-        //     }
-        // }
         HandleTouchInput();
 
         if (Input.GetKeyUp(KeyCode.S))
@@ -131,8 +213,9 @@ public class PlayerController : MonoBehaviour
             ConfirmationHandler.Show("Baseball");
         }
 
-        UpdateAction();
         UpdateGUI();
+        UpdateAction();
+
 
         if (animator)
         {
@@ -149,7 +232,9 @@ public class PlayerController : MonoBehaviour
     private float initialPinchDistance;
     private float initialPinchScale;
 
-    private float tapThreshold = 0.2f;
+    private float tapThreshold = 0.05f;
+    private float dragThreshold = 10f;
+    private bool isTap = true;
     private float lastTapTime;
 
     private enum GestureState { None, Dragging, Pinching }
@@ -162,31 +247,44 @@ public class PlayerController : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            if (touch.phase == TouchPhase.Began)
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
-                startTouchPosition = touch.position;
-                lastTouchPosition = touch.position;
-                isDragging = true;
-                currentGesture = GestureState.Dragging;
-            }
-            else if (touch.phase == TouchPhase.Moved)
-            {
-                if (isDragging)
+                if (touch.phase == TouchPhase.Began)
                 {
-                    Vector2 touchDelta = touch.position - lastTouchPosition;
-                    HandleDrag(touchDelta);
+                    startTouchPosition = touch.position;
                     lastTouchPosition = touch.position;
+                    isDragging = true;
+                    isTap = true;
+                    currentGesture = GestureState.Dragging;
                 }
-            }
-            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
-            {
-                isDragging = false;
-                if (Time.time - lastTapTime < tapThreshold)
+                else if (touch.phase == TouchPhase.Moved)
                 {
-                    HandleTap(touch.position);
+                    if (isDragging)
+                    {
+                        Vector2 touchDelta = touch.position - lastTouchPosition;
+                        if (touchDelta.magnitude > dragThreshold)
+                        {
+                            HandleDrag(touchDelta);
+                            lastTouchPosition = touch.position;
+                            isTap = false;
+                        }
+                    }
                 }
-                lastTapTime = Time.time;
-                currentGesture = GestureState.None;
+                else if (touch.phase == TouchPhase.Stationary)
+                {
+                    // Do nothing
+                }
+                else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+                {
+                    if (isTap)
+                    {
+
+                        HandleTap(touch.position);
+                    }
+
+                    isDragging = false;
+                    currentGesture = GestureState.None;
+                }
             }
         }
         else if (Input.touchCount == 2)
@@ -259,7 +357,10 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Tap detected at position: " + position);
         // Add tap handling logic here
 
-        _HandleTouch(position);
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            _HandleTouch(position);
+        }
     }
 
     private Outline lastOutline;
@@ -375,6 +476,17 @@ public class PlayerController : MonoBehaviour
 
         Label l2 = uiHook.rootVisualElement.Query<Label>("log");
         l2.text = Global._log;
+
+        if (leftJoyconActive)
+        {
+            Vector2 direction = (leftJoyconCurrentPosition - leftJoyconStartPosition).normalized;
+            // Invert the y-direction
+            Vector3 moveDirection = new Vector3(direction.x, 0, -direction.y);
+            Vector3 destination = transform.position + moveDirection * 10.0f;
+
+            // Set the destination of the NavMeshAgent
+            agent.SetDestination(destination);
+        }
     }
 
     void ClearFlags()
@@ -387,6 +499,8 @@ public class PlayerController : MonoBehaviour
     bool firstShopOpenFlag = false;
     void UpdateAction()
     {
+        animator.SetBool("attacking", false);
+
         switch (targetAction)
         {
             case 0:
@@ -418,6 +532,11 @@ public class PlayerController : MonoBehaviour
                     if (Vector3.Distance(targetLocation, getDestination(transform.position)) <= 0.3f)
                     {
                         UpdateWoodcutting();
+
+                        Vector3 __direction = targetInteractible.gameObject.transform.position - transform.position;
+                        __direction.y = 0.0f;
+                        Quaternion targetRotation = Quaternion.LookRotation(__direction);
+                        transform.rotation = targetRotation;
                     }
                 }
                 if (targetInteractible.type == "rock")
@@ -426,6 +545,11 @@ public class PlayerController : MonoBehaviour
                     if (Vector3.Distance(targetLocation, getDestination(transform.position)) <= 0.3f)
                     {
                         UpdateMining();
+
+                        Vector3 __direction = targetInteractible.gameObject.transform.position - transform.position;
+                        __direction.y = 0.0f;
+                        Quaternion targetRotation = Quaternion.LookRotation(__direction);
+                        transform.rotation = targetRotation;
                     }
                 }
                 if (targetInteractible.type == "battle")

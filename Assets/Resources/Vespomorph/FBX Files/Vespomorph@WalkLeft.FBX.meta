@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 9f8c0ecf7e472554a8613c3da291b72d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: root
+    100002: Vesmoporph_JawLower
+    100004: Vesmoporph_Stinger
+    100006: //RootNode
+    100008: Vespomorph_Abdomen
+    100010: Vespomorph_ClawLeftLower
+    100012: Vespomorph_ClawLeftLower 1
+    100014: Vespomorph_ClawLeftUpper
+    100016: Vespomorph_ClawLeftUpper 1
+    100018: Vespomorph_Head
+    100020: Vespomorph_JawUpper
+    100022: Vespomorph_LegLeftA_1
+    100024: Vespomorph_LegLeftA_2
+    100026: Vespomorph_LegLeftA_3
+    100028: Vespomorph_LegLeftA_4
+    100030: Vespomorph_LegLeftB_1
+    100032: Vespomorph_LegLeftB_2
+    100034: Vespomorph_LegLeftB_3
+    100036: Vespomorph_LegLeftB_4
+    100038: Vespomorph_LegRightA_1
+    100040: Vespomorph_LegRightA_2
+    100042: Vespomorph_LegRightA_3
+    100044: Vespomorph_LegRightA_4
+    100046: Vespomorph_LegRightB_1
+    100048: Vespomorph_LegRightB_2
+    100050: Vespomorph_LegRightB_3
+    100052: Vespomorph_LegRightB_4
+    100054: Vespomorph_Thorax
+    100056: Vespomorph_WingLeftA
+    100058: Vespomorph_WingLeftB
+    100060: Vespomorph_WingRightA
+    100062: Vespomorph_WingRightB
+    100064: Vespomorph_ClawRightLower
+    100066: Vespomorph_ClawRightUpper
+    400000: root
+    400002: Vesmoporph_JawLower
+    400004: Vesmoporph_Stinger
+    400006: //RootNode
+    400008: Vespomorph_Abdomen
+    400010: Vespomorph_ClawLeftLower
+    400012: Vespomorph_ClawLeftLower 1
+    400014: Vespomorph_ClawLeftUpper
+    400016: Vespomorph_ClawLeftUpper 1
+    400018: Vespomorph_Head
+    400020: Vespomorph_JawUpper
+    400022: Vespomorph_LegLeftA_1
+    400024: Vespomorph_LegLeftA_2
+    400026: Vespomorph_LegLeftA_3
+    400028: Vespomorph_LegLeftA_4
+    400030: Vespomorph_LegLeftB_1
+    400032: Vespomorph_LegLeftB_2
+    400034: Vespomorph_LegLeftB_3
+    400036: Vespomorph_LegLeftB_4
+    400038: Vespomorph_LegRightA_1
+    400040: Vespomorph_LegRightA_2
+    400042: Vespomorph_LegRightA_3
+    400044: Vespomorph_LegRightA_4
+    400046: Vespomorph_LegRightB_1
+    400048: Vespomorph_LegRightB_2
+    400050: Vespomorph_LegRightB_3
+    400052: Vespomorph_LegRightB_4
+    400054: Vespomorph_Thorax
+    400056: Vespomorph_WingLeftA
+    400058: Vespomorph_WingLeftB
+    400060: Vespomorph_WingRightA
+    400062: Vespomorph_WingRightB
+    400064: Vespomorph_ClawRightLower
+    400066: Vespomorph_ClawRightUpper
+    7400000: WalkLeft
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: WalkLeft
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a9ed5a2034b98464380364065aeb2c32,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

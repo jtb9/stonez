@@ -31,7 +31,16 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        transform.position = target.position + (offset * zoom);
+        float tempZoom = Math.Abs(3.0f - zoom);
+
+        if (tempZoom <= 0.5f) {
+            tempZoom = 0.5f;
+        }
+        else if (tempZoom >= 3.0f) {
+            tempZoom = 3.0f;
+        }
+
+        transform.position = target.position + (offset * tempZoom);
 
         targetZoom += Input.mouseScrollDelta.y * -0.25f;
 

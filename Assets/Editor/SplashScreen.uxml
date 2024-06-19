@@ -1,12 +1,13 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/baseCSS.uss?fileID=7433441132597879392&amp;guid=1bdd7d912a3b1394eb356a221e298e5f&amp;type=3#baseCSS" />
-    <engine:VisualElement class="panel1" style="flex-grow: 1; background-color: rgb(31, 31, 31); flex-direction: row; height: auto; width: auto;">
-        <engine:VisualElement style="flex-grow: 1; margin-top: 0; margin-right: 0; margin-bottom: 30px; margin-left: 0; height: 200px; width: 300px;">
+    <engine:VisualElement class="panel1" style="flex-grow: 1; background-color: rgb(31, 31, 31); flex-direction: column; height: auto; width: auto;">
+        <engine:VisualElement style="flex-grow: 1; margin-top: 0; margin-right: 0; margin-bottom: 30px; margin-left: 0; height: auto; width: auto;">
             <engine:Button text="Continue" name="continue" class="button1" style="font-size: 28px;" />
         </engine:VisualElement>
         <engine:VisualElement class="wallpaper">
             <engine:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UIResources/splash.png?fileID=2800000&amp;guid=4de4f12e31b792e428b93ccb44f7c80b&amp;type=3#splash&quot;); width: 1024px; height: 1024px; max-width: 1024px; max-height: 1024px; min-width: 1024px; min-height: 1024px; align-items: center; justify-content: center; align-self: center; align-content: center; -unity-background-image-tint-color: rgb(195, 195, 195);" />
             <engine:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UIResources/game_icon.png?fileID=2800000&amp;guid=5260756a1a33eec4f8186d1e8e628e86&amp;type=3#game_icon&quot;); width: 100px; height: 100px; max-width: 100px; max-height: 100px; min-width: 100px; min-height: 100px; align-items: center; justify-content: center; align-self: center; align-content: center; -unity-background-image-tint-color: rgb(255, 255, 255); border-top-left-radius: 90px; border-top-right-radius: 90px; border-bottom-right-radius: 90px; border-bottom-left-radius: 90px; position: absolute; top: 20px; left: 20px;" />
+            <engine:Label text="Welcome to the world of Stonez!" style="position: absolute; top: 20px; right: 20px; background-color: rgba(36, 36, 36, 0.87); color: rgb(238, 238, 238); -unity-font-definition: url(&quot;project://database/Assets/UIResources/CrimsonPro-VariableFont_wght.ttf?fileID=12800000&amp;guid=187d6d95ffa73494e87bdbff3157235a&amp;type=3#CrimsonPro-VariableFont_wght&quot;); font-size: 28px; border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-bottom-left-radius: 9px;" />
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>

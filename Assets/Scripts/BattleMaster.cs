@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class EnemyDefinition {
     public GameObject prefab;
     public int minimumChallengeLevel = 1;
+    public int maximumChallengeLevel = 10;
 }
 
 public class BattleMaster : MonoBehaviour
@@ -19,7 +20,9 @@ public class BattleMaster : MonoBehaviour
 
             for (int i = 0; i < enemyPrefabs.Length; i++) {
                 if (enemyPrefabs[i].minimumChallengeLevel <= Global._nextChallengeLevel) {
-                    temp.Add(enemyPrefabs[i]);
+                    if (enemyPrefabs[i].maximumChallengeLevel >= Global._nextChallengeLevel) {
+                        temp.Add(enemyPrefabs[i]);
+                    }
                 }
             }
 
@@ -109,6 +112,10 @@ public class BattleMaster : MonoBehaviour
 
     void Setup(int spawnCount)
     {
+        if (spawnCount >= 15) {
+            spawnCount = spawnCount % 15;
+        }
+        
         for (int i = 0; i < spawnCount; i++)
         {
             EnemyDefinition enemy = randomDefinition;

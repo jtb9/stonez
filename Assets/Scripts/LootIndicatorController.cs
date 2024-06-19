@@ -11,7 +11,7 @@ public class LootIndicatorController : MonoBehaviour
 
     void Start()
     {
-        var uiDocument = GameObject.Find("Overlay").GetComponent<UIDocument>();
+        var uiDocument = GameObject.Find("UIDocument").GetComponent<UIDocument>();
         rootElement = uiDocument.rootVisualElement;
     }
 

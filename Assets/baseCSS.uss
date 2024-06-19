@@ -5,7 +5,7 @@
     -unity-slice-right: 60;
     -unity-slice-bottom: 120;
     -unity-slice-scale: 0.1px;
-    background-color: rgb(104, 188, 58);
+    background-color: rgb(65, 34, 14);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -16,6 +16,7 @@
     border-bottom-color: rgb(67, 70, 23);
     -unity-font-definition: url("project://database/Assets/UIResources/CrimsonPro-VariableFont_wght.ttf?fileID=12800000&guid=187d6d95ffa73494e87bdbff3157235a&type=3#CrimsonPro-VariableFont_wght");
     font-size: 28px;
+    color: rgb(238, 238, 238);
 }
 
 .panel1 {
@@ -49,7 +50,7 @@
     -unity-slice-right: 60;
     -unity-slice-bottom: 120;
     -unity-slice-scale: 0.1px;
-    background-color: rgb(104, 188, 58);
+    background-color: rgb(65, 34, 14);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -60,4 +61,5 @@
     border-bottom-color: rgb(67, 70, 23);
     -unity-font-definition: url("project://database/Assets/UIResources/CrimsonPro-VariableFont_wght.ttf?fileID=12800000&guid=187d6d95ffa73494e87bdbff3157235a&type=3#CrimsonPro-VariableFont_wght");
     font-size: 28px;
+    color: rgb(238, 238, 238);
 }

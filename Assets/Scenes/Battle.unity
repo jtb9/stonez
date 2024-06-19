@@ -455,8 +455,13 @@ MonoBehaviour:
   enemyPrefabs:
   - prefab: {fileID: 633866896851344134, guid: f59000ae4fde58c448461a33a1af6ee9, type: 3}
     minimumChallengeLevel: 0
+    maximumChallengeLevel: 10
   - prefab: {fileID: 633866896851344134, guid: 3472a3fa19e87084f80e56e53c7e6819, type: 3}
     minimumChallengeLevel: 10
+    maximumChallengeLevel: 40
+  - prefab: {fileID: 633866896851344134, guid: fd090efff7164364fa7cf4bfd7402149, type: 3}
+    minimumChallengeLevel: 15
+    maximumChallengeLevel: 40
   spawnHook: {fileID: 1241042410}
   running: 1
 --- !u!114 &956208407
@@ -497,11 +502,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 766ff8e78946e2c4eba29827c6f81827, type: 3}
     - target: {fileID: 2347397162521581592, guid: c91d3ead9a13ead4d921547a70f7df54, type: 3}
       propertyPath: health
-      value: 10000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2347397162521581592, guid: c91d3ead9a13ead4d921547a70f7df54, type: 3}
       propertyPath: maxHealth
-      value: 10000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7922714227130478713, guid: c91d3ead9a13ead4d921547a70f7df54, type: 3}
       propertyPath: m_LocalPosition.x

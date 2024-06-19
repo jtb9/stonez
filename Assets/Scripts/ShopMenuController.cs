@@ -30,6 +30,7 @@ public class ShopMenuController : MonoBehaviour
         BindButton("button2", OnClick2);
         BindButton("button3", OnClick3);
         BindButton("button4", OnClick4);
+        BindButton("button5", OnClick5);
     }
 
     void BindButton(String name, Action target) {
@@ -61,10 +62,41 @@ public class ShopMenuController : MonoBehaviour
         }
     }
 
+    String getQuantityByName(String name) {
+        try {
+            return inventory.getByName(name).itemQuantity.ToString();
+        }
+        catch(System.Exception e) {
+            return "0";
+        }
+    }
+
+    String getValueByName(String name) {
+        try {
+            return (inventory.getByName(name).itemQuantity * inventory.getValue(name)).ToString();
+        }
+        catch(System.Exception e) {
+            return "0";
+        }
+    }
+
     void UpdategUI() {
-        SetLabel("gold", "Current Gold: " + Global._gold.ToString());
-        SetLabel("stats", Global.statsAsString());
-        SetLabel("inventory", inventory.toString());
+        SetLabel("gold", Global._gold.ToString());
+        SetLabel("attack", Global._attackLevel.ToString());
+        SetLabel("strength", Global._strengthLevel.ToString());
+        SetLabel("defense", Global._defenseLevel.ToString());
+        SetLabel("skill", Global._nextChallengeLevel.ToString());
+        SetLabel("woodcutting", Global._woodcutLevel.ToString());
+        SetLabel("mining", Global._miningLevel.ToString());
+        SetLabel("rocks", getQuantityByName("rock"));
+        SetLabel("gems", getQuantityByName("gem"));
+        SetLabel("sap", getQuantityByName("sap"));
+        SetLabel("logs", getQuantityByName("wood"));
+
+        SetLabel("rocks2", getValueByName("rock"));
+        SetLabel("gems2", getValueByName("gem"));
+        SetLabel("sap2", getValueByName("sap"));
+        SetLabel("logs2", getValueByName("wood"));
     }
 
     void OnClick1() {
@@ -95,5 +127,12 @@ public class ShopMenuController : MonoBehaviour
 
     void OnClick4() {
         ShopMenuController.Close();
+    }
+
+    void OnClick5() {
+        if (Global._gold >= 50) {
+            Global._defenseLevel += 1;
+            inventory.gold -= 50;
+        }
     }
 }
