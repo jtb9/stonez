@@ -25,7 +25,7 @@ public class LootIndicatorController : MonoBehaviour
         icon.style.height = 50;
         icon.style.position = Position.Absolute;
         icon.style.backgroundImage = new StyleBackground(iconTexture);
-        icon.style.left = 65;
+        icon.style.right = 65;
         icon.style.bottom = 65;
 
          Label quantityLabel = new Label(quantity.ToString());
@@ -36,7 +36,7 @@ public class LootIndicatorController : MonoBehaviour
         quantityLabel.style.height = icon.resolvedStyle.height; // Match the height of the icon
         quantityLabel.style.position = Position.Relative;
         quantityLabel.style.top = -20;
-        quantityLabel.style.left = -20;
+        quantityLabel.style.right = -20;
         quantityLabel.style.borderTopLeftRadius = 6;
         quantityLabel.style.borderBottomLeftRadius = 6;
         quantityLabel.style.borderTopRightRadius = 6;

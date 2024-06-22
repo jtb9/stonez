@@ -22,20 +22,14 @@ public class PlayerController : MonoBehaviour
     public GameObject clickPrefab;
     public Animator animator;
     private CameraController cameraController;
+    public Vector2 subJoyconOffset = new Vector2(35, 35);
 
     public GameObject challengePrefabHook;
 
     private LootIndicatorController lootIndicatorController;
 
-    private VisualElement leftJoycon;
-    private VisualElement rightJoycon;
-    public float joyconRadius = 100f; // Radius within which the joycon can move
-    public float maxDistance = 5f;  // Maximum distance the player can move in one go
+    public Joystick joystick;
 
-    private Vector2 leftJoyconStartPosition;
-    private Vector2 leftJoyconCurrentPosition;
-    private bool leftJoyconActive = false;
-    private bool leftJoyconPointerDown = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -60,70 +54,6 @@ public class PlayerController : MonoBehaviour
 
         var challengeButton = uiHook.rootVisualElement.Q<Button>("challenge");
         challengeButton.clicked += ChallengeButtonClicked;
-
-        leftJoycon = new VisualElement();
-        leftJoycon.style.width = 200;
-        leftJoycon.style.height = 200;
-        leftJoycon.style.backgroundColor = new StyleColor(Color.black);
-        leftJoycon.style.opacity = 0.8f;
-        leftJoycon.style.borderTopLeftRadius = 180;
-        leftJoycon.style.borderTopRightRadius = 180;
-        leftJoycon.style.borderBottomLeftRadius = 180;
-        leftJoycon.style.borderBottomRightRadius = 180;
-        leftJoycon.style.position = Position.Absolute;
-        leftJoycon.style.left = 100;
-        leftJoycon.style.bottom = 100;
-        uiHook.rootVisualElement.Add(leftJoycon);
-
-        // Register event handlers
-        leftJoycon.RegisterCallback<PointerDownEvent>(OnLeftJoyconPointerDown);
-        leftJoycon.RegisterCallback<PointerMoveEvent>(OnLeftJoyconPointerMove);
-        leftJoycon.RegisterCallback<PointerUpEvent>(OnLeftJoyconPointerUp);
-        leftJoycon.RegisterCallback<PointerLeaveEvent>(OnLeftJoyconPointerLeave);
-        leftJoycon.RegisterCallback<PointerEnterEvent>(OnLeftJoyconPointerEnter);
-    }
-
-    private void OnLeftJoyconPointerDown(PointerDownEvent evt)
-    {
-        leftJoyconStartPosition = evt.position;
-        leftJoyconCurrentPosition = evt.position;
-        leftJoyconActive = true;
-        leftJoyconPointerDown = true;
-    }
-
-    private void OnLeftJoyconPointerMove(PointerMoveEvent evt)
-    {
-        if (leftJoyconActive)
-        {
-            Vector2 delta = evt.position - new Vector3(leftJoyconStartPosition.x, leftJoyconStartPosition.y, 0.0f);
-            if (delta.magnitude > joyconRadius)
-            {
-                delta = delta.normalized * joyconRadius;
-            }
-            leftJoyconCurrentPosition = leftJoyconStartPosition + delta;
-        }
-    }
-
-    private void OnLeftJoyconPointerUp(PointerUpEvent evt)
-    {
-        leftJoyconActive = false;
-        leftJoyconPointerDown = false;
-    }
-
-    private void OnLeftJoyconPointerLeave(PointerLeaveEvent evt)
-    {
-        if (!leftJoyconPointerDown)
-        {
-            leftJoyconActive = false;
-        }
-    }
-
-    private void OnLeftJoyconPointerEnter(PointerEnterEvent evt)
-    {
-        if (leftJoyconPointerDown)
-        {
-            leftJoyconActive = true;
-        }
     }
 
     void ChallengeButtonClicked()
@@ -216,6 +146,19 @@ public class PlayerController : MonoBehaviour
         UpdateGUI();
         UpdateAction();
 
+        if (joystick.active)
+        {
+            Vector2 direction = joystick.Direction;
+            // Invert the y-direction
+            Vector3 moveDirection = new Vector3(direction.x, 0, direction.y);
+            Vector3 destination = transform.position + moveDirection * 1.0f;
+
+            // Set the destination of the NavMeshAgent
+            agent.SetDestination(destination);
+            targetLocation = destination;
+
+            targetAction = 1;
+        }
 
         if (animator)
         {
@@ -476,17 +419,6 @@ public class PlayerController : MonoBehaviour
 
         Label l2 = uiHook.rootVisualElement.Query<Label>("log");
         l2.text = Global._log;
-
-        if (leftJoyconActive)
-        {
-            Vector2 direction = (leftJoyconCurrentPosition - leftJoyconStartPosition).normalized;
-            // Invert the y-direction
-            Vector3 moveDirection = new Vector3(direction.x, 0, -direction.y);
-            Vector3 destination = transform.position + moveDirection * 10.0f;
-
-            // Set the destination of the NavMeshAgent
-            agent.SetDestination(destination);
-        }
     }
 
     void ClearFlags()
@@ -520,7 +452,9 @@ public class PlayerController : MonoBehaviour
                 // check for going back to idle
                 if (Vector3.Distance(targetLocation, getDestination(transform.position)) <= 0.1f)
                 {
-                    targetAction = 0;
+                    if (joystick.active == false) {
+                        targetAction = 0;
+                    }
                 }
                 break;
             case 2:
